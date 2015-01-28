@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION["userValid"]) || empty($_SESSION["userValid"])){
+	header("Location:index.php");
+}else{
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -118,3 +124,6 @@
 		</script>
 	</body>
 </html>
+<?php
+} //Fin de else
+?>
